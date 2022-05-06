@@ -3,6 +3,10 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     pins.digitalWritePin(DigitalPin.P2, -1)
+    ContinuousServo.spin_one_way(AnalogPin.P0)
+    basic.pause(2000)
+    ContinuousServo.spin_other_way(AnalogPin.P0)
+    basic.pause(2000)
 })
 input.onButtonPressed(Button.B, function () {
     pins.digitalWritePin(DigitalPin.P1, 0)
