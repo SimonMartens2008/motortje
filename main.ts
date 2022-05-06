@@ -12,9 +12,6 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     pins.digitalWritePin(DigitalPin.P1, 0)
-    pins.digitalWritePin(DigitalPin.P2, 0)
-    for (let index = 0; index < 1000000000000000; index++) {
-        ContinuousServo.turn_off_motor(DigitalPin.P2)
-        basic.clearScreen()
-    }
+    ContinuousServo.turn_off_motor(DigitalPin.P2)
+    basic.pause(5000)
 })
