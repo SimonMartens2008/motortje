@@ -4,10 +4,10 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     pins.digitalWritePin(DigitalPin.P2, 1)
     for (let index = 0; index < 10; index++) {
-        ContinuousServo.spin_one_way(AnalogPin.P2)
-        basic.pause(2500)
-        ContinuousServo.spin_other_way(AnalogPin.P2)
-        basic.pause(2500)
+        ContinuousServo.spin_one_way_with_speed(AnalogPin.P2, 10)
+        basic.pause(2700)
+        ContinuousServo.spin_other_way_with_speed(AnalogPin.P2, 10)
+        basic.pause(2700)
     }
 })
 input.onButtonPressed(Button.B, function () {
