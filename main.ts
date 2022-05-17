@@ -15,3 +15,7 @@ input.onButtonPressed(Button.B, function () {
     ContinuousServo.turn_off_motor(DigitalPin.P1)
     basic.pause(5000)
 })
+basic.forever(function () {
+    basic.showString("nwqoNIqns")
+    basic.pause(500)
+})
